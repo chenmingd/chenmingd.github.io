@@ -8,12 +8,12 @@ subtitle: '遵循自然,自由生长,控制欲望,宁静致远'
 description: '记录生活，分享知识，分享快乐。'
 keywords: 'AI, 机器学习, 深度学习, 数据分析, 大模型, 数据可视化, 程序人生, 个人博客, 记录生活,中医, 中医养生, 中医知识, 中医文化, 传统文化, 生活碎碎念'
 author: 陈明东
-language: zh-CN
+language: zh-CN 
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://chenmingd.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
