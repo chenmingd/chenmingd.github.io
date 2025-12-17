@@ -684,7 +684,7 @@ crisp:
 # --------------------------------------
 
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: b5438512e25fe1bea310594831853425
 
 # https://analytics.google.com/analytics/web/
 google_analytics:
