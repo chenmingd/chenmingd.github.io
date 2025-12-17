@@ -142,11 +142,12 @@ More info : [GitHub Pages](https://docs.github.com/zh/pages)
 1. 在GitHub中注册一个账户。
 
 2. 在任何页面的右上角，选择 ，然后单击“新建存储库”。
-
+    ![](repo-create-global-nav-update.webp)
+    
 3. 使用“所有者”下拉菜单选择你想要拥有存储库的帐户。
 
 4. 输入仓库的名称和说明（可选）。 如果要创建用户或组织站点，则存储库必须命名为 <user>.github.io 或 <organization>.github.io。 如果您的用户或组织名称包含大写字母，您必须小写字母。 
-
+    ![](create-repository-name-pages.webp)
 5. 选择仓库可见性 - 公共
 
 6. 将README 切换为开启
@@ -173,6 +174,7 @@ $ git push -u origin main
 
 ### 开启GitHub Pages功能
 1. 在GitHub仓库名称下，单击 “Settings”****。 如果看不到“设置”选项卡，请选择“”下拉菜单，然后单击“设置”。
+    ![](repo-actions-settings.webp)
 
 2. 在边栏的“代码和自动化”部分中，单击“ Pages”****。
 
