@@ -3,7 +3,8 @@ title: 零成本打造个人博客：用 Hexo + GitHub 全自动部署，轻松�
 date: 2025-12-16 16:24:42
 tags:
 ---
-
+前言
+==========
 你是否也想拥有一个风格独特、加载迅速的个人博客或作品集网站，却又被服务器费用和复杂的部署流程劝退？这篇教程将为你提供一个完美解决方案。
 
 本文详细介绍了如何利用 Hexo 这一高效的静态博客框架，结合 GitHub Pages 的免费托管服务与 GitHub Actions 的自动化工作流，从零开始搭建并全自动部署你的个人网站。你将学到：
@@ -47,15 +48,15 @@ Node.js 为大多数平台提供了官方的[安装程序](https://nodejs.org/zh
 ### 安装Git
 - Windows：下载并安装[git](https://git-scm.com/install/windows)。
 - Mac：使用 Homebrew, [MacPorts](https://www.macports.org/) 或者下载[安装程序](https://sourceforge.net/projects/git-osx-installer/)。
-- Linux (Ubuntu, Debian)：<code> sudo apt-get install git-core </code>
-- Linux (Fedora, Red Hat, CentOS)：<code> sudo yum install git-core </code>
+- Linux (Ubuntu, Debian)：`` sudo apt-get install git-core ``
+- Linux (Fedora, Red Hat, CentOS)：`` sudo yum install git-core ``
 
 ## 安装Hexo
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 ``` bash
 $ npm install -g hexo-cli
 ```
-执行<code> hexo v </code> 查看安装的hexo版本情况
+执行`` hexo v `` 查看安装的hexo版本情况
 
 
 第二、创建Hexo个人博客网站
@@ -89,7 +90,8 @@ Hexo提供了很多[主题](https://hexo.io/themes/)，建站成功后可以选�
 
 这里我选择[butterfly](https://butterfly.js.org/)作为网站的主题。它是一个基于[hexo-theme-melody](https://github.com/Molunerfinn/hexo-theme-melody)开发的主题，文档全面更新快。
 
-> 其他主题的安装方式与当前Butterfly安装方式是相同的
+> [!NOTE]
+> **提示** 其他主题的安装方式与当前Butterfly安装方式是相同的
 
 ### 安装Butterfly主题
 
@@ -114,7 +116,7 @@ More info : [Butterfly安装](https://butterfly.js.org/posts/21cfbf15/)
 $ cd <folder>
 $ hexo s
 ```
-浏览器中输入 <coce> http://localhost:4000 </code>
+浏览器中输入 `` http://localhost:4000 ``
 
 第三、发布博客网站至互联网
 =======================
@@ -151,10 +153,10 @@ More info : [GitHub Pages](https://docs.github.com/zh/pages)
 
 7. 单击“创建存储库”。
 
-在页面中找到类似 <code> https://github.com/**.git </code>的地址。并记住他。
+在页面中找到类似 `` https://github.com/**.git ``的地址。并记住他。
 
 ### 上传Hexo博客站点信息到GitHub
-需要将本地Hexo博客网站的所有内容都上传至<code> https://github.com/**.git </code>。具体操作
+需要将本地Hexo博客网站的所有内容都上传至`` https://github.com/**.git ``。具体操作
 ``` bash
 $ cd <folder>
 $ rm -rf .git
@@ -167,7 +169,7 @@ $ git remote add origin https://github.com/**.git
 $ git push -u origin main
 
 ```
-> 注意：要将https://github.com/**.git换成自己的仓库地址。如果是第一次<code> git remote add </code>会让输入GitHub的验证信息，届时按照步骤操作就可以了
+> 注意：要将https://github.com/**.git换成自己的仓库地址。如果是第一次`` git remote add ``会让输入GitHub的验证信息，届时按照步骤操作就可以了
 
 ### 开启GitHub Pages功能
 1. 在GitHub仓库名称下，单击 “Settings”****。 如果看不到“设置”选项卡，请选择“”下拉菜单，然后单击“设置”。
@@ -176,7 +178,7 @@ $ git push -u origin main
 
 3. 在“生成和部署”的“源”下，选择“GitHub Actions”。
 
-4. 在Hexo博客站点中创建一个<code> .github/workflows/pages.yml </code>，并并填入以下内容
+4. 在Hexo博客站点中创建一个``.github/workflows/pages.yml ``，并并填入以下内容
 ``` .github/workflows/pages.yml
 name: Pages
 
@@ -239,7 +241,9 @@ $ git push
 ``` 
 
 6. 等几分钟，就能通过https://<user>.github.io 或 <organization>.github.io访问自己的博客了
-> 注意：这里的user、organization是自己GitHub账户名或者组织名
+
+> [!NOTE]
+> **注意：** 这里的user、organization是自己GitHub账户名或者组织名
 
 第四步 小试牛刀，测试自动部署网页的情况
 =================================
@@ -247,3 +251,11 @@ $ git push
 1.在本地电脑使用命令创建一个文档，并添加自己的博客内容
 2.使用git将刚刚新建的文档推送至github.等几分钟后就可以在网页中看到新建的页面了
 3.修改刚刚的文档，然后再次推送至github.查看页面效果
+
+参考
+========
+- [1] [Hexo安装指南](https://hexo.io/zh-cn/docs/)
+- [2] [Butterfly安装配置指南](https://butterfly.js.org/posts/21cfbf15/)
+- [3] [Hexo GitHub Pages配置指南](https://docs.github.com/zh/pages)
+- [4] [GitHub创建仓库指南](https://docs.github.com/zh/get-started/start-your-journey/hello-world)
+- [5] [Git基础用法](https://docs.github.com/zh/get-started/learning-to-code/getting-started-with-git)
